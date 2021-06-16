@@ -5,9 +5,19 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import com.shd.amazonviewer.model.*;
-//import com.anncode.makereport.Report;
+import com.shd.makereport.Report;
 import com.shd.util.AmazonUtil;
 
+/**
+ * <h1>AmazonViewer</h1>
+ * AmazonViewer es un programa que permite visualizar Movies, Series con sus respetivos Chapters, Books y Magazines.
+ * <p>
+ * Existen algunas reglas como todos los elementos pueden ser visualizados o leídos a excepción de las Magazines, estas sólo pueden ser vistas a modo de exposición sin ser leídas.
+ *
+ * @author Ivan Tabera
+ * @version 1.1
+ * @since 2021
+ **/
 public class Main {
 
 	public static void main(String[] args) {
@@ -231,10 +241,10 @@ public class Main {
 	
 	public static void makeReport() {
 		
-		/*Report report = new Report();
+		Report report = new Report();
 		report.setNameFile("reporte");
 		report.setExtension("txt");
-		report.setTitle(":: VISTOS ::");*/
+		report.setTitle(":: VISTOS ::");
 		String contentReport = "";
 		
 		for (Movie movie : movies) {
@@ -262,8 +272,8 @@ public class Main {
 			}
 		}
 
-		/*report.setContent(contentReport);
-		report.makeReport();*/
+		report.setContent(contentReport);
+		report.makeReport();
 		System.out.println("Reporte Generado");
 		System.out.println();
 	}
@@ -272,11 +282,11 @@ public class Main {
 		
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd-h-m-s-S");
 		String dateString = df.format(date);
-		/*Report report = new Report();*/
+		Report report = new Report();
 		
-		/*report.setNameFile("reporte" + dateString);
+		report.setNameFile("reporte" + dateString);
 		report.setExtension("txt");
-		report.setTitle(":: VISTOS ::");*/
+		report.setTitle(":: VISTOS ::");
 		
 		
 		SimpleDateFormat dfNameDays = new SimpleDateFormat("E, W MMM Y");
@@ -306,8 +316,8 @@ public class Main {
 				
 			}
 		}
-		/*report.setContent(contentReport);
-		report.makeReport();*/
+		report.setContent(contentReport);
+		report.makeReport();
 		
 		System.out.println("Reporte Generado");
 		System.out.println();
